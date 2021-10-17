@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fancy Form</title>
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- You may add more stuff here -->
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- You may reorganise the whole HTML, as long as your form achieves the same effect. -->
+    <div class="container">
+      <div class="row">
+        <div class="col s12 l2"></div>
+        <div class="col s12 l8 card">
+          <form id="form1" onsubmit="return !1">
+            <div class="card-content">
+              <div class="row">
+                <div class="input-field col s12 form-group">
+                  <input
+                    id="address"
+                    type="text"
+                    required
+                    data-pristine-required-message="Please input ETH Address"
+                  />
+                  <label for="address">ETH Address</label>
+                  <!-- <span class="helper-text" data-error="wrong" data-success="right"></span> -->
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12 form-group">
+                  <input
+                    id="amount"
+                    type="number"
+                    required
+                    min="1"
+                    data-pristine-required-message="Please input number value"
+                    data-pristine-min-message="Amount must be at least 1"
+                  />
+                  <label for="amount">Amount to send</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12 form-group">
+                  <input
+                    id="otp"
+                    type="text"
+                    required
+                    data-pristine-required-message="Please input OTP Authentication"
+                  />
+                  <label for="otp">OTP Authentication</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-action">
+              <button class="waves-effect waves-light btn" type="submit">
+                SEND TOKENS
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="col s12 l2"></div>
+      </div>
+    </div>
+
+    <script src="pristine.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
